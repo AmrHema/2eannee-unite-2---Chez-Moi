@@ -1,0 +1,113 @@
+/* تنسيقات عامة وتحديد الخط */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6; /* لون خلفية فاتح */
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* دعم اللغة العربية */
+    text-align: right;
+}
+
+/* تنسيق رأس الصفحة (Header) */
+.main-header {
+    background-color: #2e86c1; /* لون أزرق جديد جذاب */
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    color: #ffd700; /* لون ذهبي لاسم الموقع */
+}
+
+.main-header p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* تنسيق حاوية البطاقات (Grid Layout) */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* تنسيق البطاقة الواحدة */
+.word-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* تأثير التفاعل عند مرور مؤشر الفأرة أو النقر */
+.word-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* تنسيق الكلمة الفرنسية */
+.french-word {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #c0392b; /* لون أحمر غامق للفرنسية */
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* تنسيق الترجمة العربية */
+.arabic-translation {
+    font-size: 1.15rem;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* تنسيق أيقونة النطق */
+.pronounce-icon {
+    font-size: 2rem;
+    color: #27ae60; /* لون أخضر للنطق */
+    text-align: left;
+    transition: color 0.3s;
+}
+
+/* ************************************** */
+/* تنسيقات إضافية لحالة "جاري النطق"    */
+/* ************************************** */
+.word-card.speaking {
+    border: 4px solid #27ae60;
+    background-color: #ecf0f1; 
+}
+.word-card.speaking .pronounce-icon {
+    color: #c0392b; /* تغيير لون الأيقونة أثناء النطق */
+}
+
+/* ************************************** */
+/* تنسيقات الهواتف (Media Query)        */
+/* ************************************** */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2.2rem;
+    }
+    .cards-container {
+        grid-template-columns: 1fr; 
+        padding: 20px;
+        gap: 20px;
+    }
+    .french-word {
+        font-size: 1.6rem;
+    }
+}
