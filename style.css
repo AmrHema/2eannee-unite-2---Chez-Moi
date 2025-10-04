@@ -43,7 +43,8 @@ body {
 /* حاوية فرعية للبطاقات لتطبيق Grid داخل كل مجموعة */
 .category-group {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* تخطيط الشبكة يسمح ببطاقتين على الأقل في الصف للهواتف اللوحية وما فوق */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 25px;
     margin-bottom: 40px; /* مسافة بعد نهاية كل مجموعة */
 }
@@ -55,13 +56,13 @@ body {
     color: #34495e; /* لون غامق للعناوين */
     padding: 15px 0;
     margin-bottom: 10px;
-    border-bottom: 4px solid #007bff; /* خط فاصل بلون العنوان الرئيسي */
+    border-bottom: 4px solid #dc3545; /* خط فاصل بلون الوحدة */
     width: 100%; 
     text-align: right;
 }
 .category-title span {
     font-size: 1.2rem;
-    color: #dc3545;
+    color: #007bff;
     margin-right: 15px;
 }
 
@@ -126,6 +127,7 @@ body {
         padding: 20px;
     }
     .category-group {
+        /* بطاقة واحدة في الصف على الهواتف الصغيرة لضمان وضوح النص */
         grid-template-columns: 1fr; 
         gap: 20px;
     }
