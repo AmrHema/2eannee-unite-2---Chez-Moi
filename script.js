@@ -2,8 +2,8 @@
 const vocabulary = [
     // ===============================================================
     // Module 1: مفردات المدرسة والرياضة والأساسيات
+    // (لم يتغير لضمان استمرارية الترتيب من الوحدة السابقة)
     // ===============================================================
-    // Noms masculins (Module 1)
     { french: "un collège mixte", arabic: "مدرسة مشتركة", category: "Module 1 - Noms masculins" },
     { french: "un directeur", arabic: "مدير", category: "Module 1 - Noms masculins" },
     { french: "un objet", arabic: "شيء", category: "Module 1 - Noms masculins" },
@@ -33,8 +33,6 @@ const vocabulary = [
     { french: "le visage", arabic: "الوجه", category: "Module 1 - Noms masculins" },
     { french: "les yeux", arabic: "العينين", category: "Module 1 - Noms masculins" },
     { french: "les cheveux", arabic: "الشعر", category: "Module 1 - Noms masculins" },
-
-    // Noms féminins (Module 1)
     { french: "une école", arabic: "مدرسة", category: "Module 1 - Noms féminins" },
     { french: "une classe", arabic: "فصل", category: "Module 1 - Noms féminins" },
     { french: "une bibliothèque", arabic: "مكتبة", category: "Module 1 - Noms féminins" },
@@ -56,8 +54,6 @@ const vocabulary = [
     { french: "une photographie", arabic: "صورة", category: "Module 1 - Noms féminins" },
     { french: "une taille", arabic: "طول القامة", category: "Module 1 - Noms féminins" },
     { french: "une description physique", arabic: "وصف جسماني", category: "Module 1 - Noms féminins" },
-
-    // Verbes (Module 1)
     { french: "manger", arabic: "يأكل", category: "Module 1 - Verbes" },
     { french: "identifier", arabic: "يحدد هوية", category: "Module 1 - Verbes" },
     { french: "préparer", arabic: "يعد / يجهز", category: "Module 1 - Verbes" },
@@ -76,8 +72,6 @@ const vocabulary = [
     { french: "étudier", arabic: "يدرس", category: "Module 1 - Verbes" },
     { french: "regarder", arabic: "يشاهد", category: "Module 1 - Verbes" },
     { french: "donner", arabic: "يعطي", category: "Module 1 - Verbes" },
-
-    // Adj., adv., prép. et expressions (Module 1)
     { french: "maintenant", arabic: "الآن", category: "Module 1 - Adj. & Expressions" },
     { french: "super", arabic: "رائع", category: "Module 1 - Adj. & Expressions" },
     { french: "idéal (e)", arabic: "مثالي", category: "Module 1 - Adj. & Expressions" },
@@ -91,11 +85,11 @@ const vocabulary = [
     { french: "beau / laid", arabic: "جميل / قبيح", category: "Module 1 - Adj. & Expressions" },
     { french: "belle", arabic: "جميلة", category: "Module 1 - Adj. & Expressions" },
     { french: "riche / pauvre", arabic: "غني / فقير", category: "Module 1 - Adj. & Expressions" },
-    
+
     // ===============================================================
     // Module Mes vêtements: الملابس والإكسسوارات
+    // (لم يتغير لضمان استمرارية الترتيب من الوحدة السابقة)
     // ===============================================================
-    // Noms masculins (Mes vêtements)
     { french: "un vêtement", arabic: "ملبس", category: "Module Mes vêtements - Noms masculins" },
     { french: "un look", arabic: "مظهر - هيئة", category: "Module Mes vêtements - Noms masculins" },
     { french: "un uniforme", arabic: "زي موحد", category: "Module Mes vêtements - Noms masculins" },
@@ -114,8 +108,6 @@ const vocabulary = [
     { french: "un club", arabic: "نادي", category: "Module Mes vêtements - Noms masculins" },
     { french: "des motifs (vêtements)", arabic: "زخارف (رسوم على الملابس)", category: "Module Mes vêtements - Noms masculins" },
     { french: "le prix", arabic: "السعر", category: "Module Mes vêtements - Noms masculins" },
-
-    // Noms féminins (Mes vêtements)
     { french: "une tenue", arabic: "زي - ملبس", category: "Module Mes vêtements - Noms féminins" },
     { french: "une taille", arabic: "مقاس الملابس", category: "Module Mes vêtements - Noms féminins" },
     { french: "une valise", arabic: "حقيبة سفر", category: "Module Mes vêtements - Noms féminins" },
@@ -130,8 +122,6 @@ const vocabulary = [
     { french: "des chaussures", arabic: "حذاء", category: "Module Mes vêtements - Noms féminins" },
     { french: "des baskets", arabic: "حذاء رياضي", category: "Module Mes vêtements - Noms féminins" },
     { french: "des vacances", arabic: "إجازة", category: "Module Mes vêtements - Noms féminins" },
-    
-    // Les vêtements (الملابس)
     { french: "un pantalon", arabic: "بنطلون", category: "Module Mes vêtements - Les vêtements" },
     { french: "un pull", arabic: "بلوفر", category: "Module Mes vêtements - Les vêtements" },
     { french: "un short", arabic: "شورت", category: "Module Mes vêtements - Les vêtements" },
@@ -149,18 +139,14 @@ const vocabulary = [
     { french: "une chemise", arabic: "قميص", category: "Module Mes vêtements - Les vêtements" },
     { french: "une veste", arabic: "جاكيت", category: "Module Mes vêtements - Les vêtements" },
     { french: "des chaussettes (f)", arabic: "جورب", category: "Module Mes vêtements - Les vêtements" },
-
-    // Des accessoires (إكسسوارات)
     { french: "un chapeau", arabic: "قبعة", category: "Module Mes vêtements - Des accessoires" },
-    { french: "un bonnet", arabic: "طاقية", category: "Module Mes vêtements - Des accessories" },
-    { french: "un sac", arabic: "حقيبة", category: "Module Mes vêtements - Des accessories" },
-    { french: "un collier", arabic: "عقد", category: "Module Mes vêtements - Des accessories" },
-    { french: "une casquette", arabic: "كاسكيت", category: "Module Mes vêtements - Des accessories" },
+    { french: "un bonnet", arabic: "طاقية", category: "Module Mes vêtements - Des accessoires" },
+    { french: "un sac", arabic: "حقيبة", category: "Module Mes vêtements - Des accessoires" },
+    { french: "un collier", arabic: "عقد", category: "Module Mes vêtements - Des accessoires" },
+    { french: "une casquette", arabic: "كاسكيت", category: "Module Mes vêtements - Des accessoires" },
     { french: "une cravate", arabic: "كرافتة / رباط عنق", category: "Module Mes vêtements - Des accessories" },
     { french: "une écharpe", arabic: "إيشارب (لفاف عنق)", category: "Module Mes vêtements - Des accessories" },
-    { french: "des lunettes de soleil", arabic: "نظارة شمس", category: "Module Mes vêtements - Des accessories" },
-
-    // Verbes (Mes vêtements)
+    { french: "des lunettes de soleil", arabic: "نظارة شمس", category: "Module Mes vêtements - Des accessoires" },
     { french: "mettre", arabic: "يرتدي", category: "Module Mes vêtements - Verbes" },
     { french: "porter", arabic: "يرتدي", category: "Module Mes vêtements - Verbes" },
     { french: "s'habiller", arabic: "يرتدي", category: "Module Mes vêtements - Verbes" },
@@ -177,8 +163,6 @@ const vocabulary = [
     { french: "vouloir", arabic: "يريد", category: "Module Mes vêtements - Verbes" },
     { french: "pouvoir", arabic: "يستطيع", category: "Module Mes vêtements - Verbes" },
     { french: "s'informer sur", arabic: "يستعلم عن", category: "Module Mes vêtements - Verbes" },
-
-    // Adj., adv., prép. et expressions (Mes vêtements)
     { french: "nouveau / nouvel", arabic: "جديد", category: "Module Mes vêtements - Adj. & Expressions" },
     { french: "nouvelle", arabic: "جديدة", category: "Module Mes vêtements - Adj. & Expressions" },
     { french: "pour", arabic: "من أجل / لكي", category: "Module Mes vêtements - Adj. & Expressions" },
@@ -199,7 +183,7 @@ const vocabulary = [
     { french: "il fait froid", arabic: "الجو بارد", category: "Module Mes vêtements - Adj. & Expressions" },
 
     // ===============================================================
-    // Module 2: Chez moi (المنزل وأجزاؤه)
+    // Module 2: Chez moi (المنزل وأجزاؤه) - معاد تنظيمه
     // ===============================================================
     // Noms masculins (Module 2)
     { french: "un immeuble", arabic: "عمارة", category: "Module 2 - Noms masculins" },
@@ -233,7 +217,7 @@ const vocabulary = [
     { french: "une ville", arabic: "مدينة", category: "Module 2 - Noms féminins" },
     { french: "une bibliothèque", arabic: "مكتبة", category: "Module 2 - Noms féminins" },
     
-    // Les parties de la maison (أجزاء المنزل)
+    // Les parties de la maison (أجزاء المنزل) 
     { french: "un salon", arabic: "صالون", category: "Module 2 - Les parties de la maison" },
     { french: "un couloir", arabic: "ممر", category: "Module 2 - Les parties de la maison" },
     { french: "une chambre", arabic: "غرفة نوم", category: "Module 2 - Les parties de la maison" },
@@ -245,7 +229,7 @@ const vocabulary = [
     { french: "les toilettes", arabic: "الحمام (دورات المياه)", category: "Module 2 - Les parties de la maison" },
     { french: "un garage", arabic: "جراج", category: "Module 2 - Les parties de la maison" },
 
-    // Verbes (Module 2)
+    // Verbes (Module 2) 
     { french: "prendre", arabic: "يتناول", category: "Module 2 - Verbes" },
     { french: "préparer", arabic: "يعد / يجهز", category: "Module 2 - Verbes" },
     { french: "dormir", arabic: "ينام", category: "Module 2 - Verbes" },
@@ -299,8 +283,8 @@ const vocabulary = [
 
     // ===============================================================
     // Module 3: Je prends le train pour Alexandrie (السفر والمواصلات)
+    // (لم يتغير لضمان استمرارية الترتيب من الوحدة السابقة)
     // ===============================================================
-    // Noms masculins (Module 3)
     { french: "un moyen de transport", arabic: "وسيلة مواصلات", category: "Module 3 - Noms masculins" },
     { french: "un lieu", arabic: "مكان", category: "Module 3 - Noms masculins" },
     { french: "un touriste", arabic: "سائح", category: "Module 3 - Noms masculins" },
@@ -330,8 +314,6 @@ const vocabulary = [
     { french: "le départ", arabic: "الرحيل", category: "Module 3 - Noms masculins" },
     { french: "le centre", arabic: "الوسط / المنتصف", category: "Module 3 - Noms masculins" },
     { french: "le maximum", arabic: "الحد الأقصى", category: "Module 3 - Noms masculins" },
-
-    // Noms féminins (Module 3)
     { french: "une carte", arabic: "خريطة", category: "Module 3 - Noms féminins" },
     { french: "une ville", arabic: "مدينة", category: "Module 3 - Noms féminins" },
     { french: "la mer", arabic: "البحر", category: "Module 3 - Noms féminins" },
@@ -346,8 +328,6 @@ const vocabulary = [
     { french: "une durée", arabic: "مدة", category: "Module 3 - Noms féminins" },
     { french: "des informations", arabic: "معلومات", category: "Module 3 - Noms féminins" },
     { french: "une rose des vents", arabic: "بوصلة الاتجاهات", category: "Module 3 - Noms féminins" },
-
-    // Verbes (Module 3)
     { french: "prendre", arabic: "يأخذ", category: "Module 3 - Verbes" },
     { french: "aller", arabic: "يذهب", category: "Module 3 - Verbes" },
     { french: "localiser", arabic: "يحدد موقع", category: "Module 3 - Verbes" },
@@ -368,8 +348,6 @@ const vocabulary = [
     { french: "voir", arabic: "يرى", category: "Module 3 - Verbes" },
     { french: "connaître", arabic: "يعرف", category: "Module 3 - Verbes" },
     { french: "prévoir", arabic: "يخطط مسبقاً / يتوقع", category: "Module 3 - Verbes" },
-
-    // Adj., adv., prép. et expressions (Module 3)
     { french: "rapide", arabic: "سريع", category: "Module 3 - Adj. & Expressions" },
     { french: "vite", arabic: "بسرعة", category: "Module 3 - Adj. & Expressions" },
     { french: "pratique", arabic: "عملي", category: "Module 3 - Adj. & Expressions" },
@@ -467,49 +445,4 @@ function createCard(item) {
  * دالة لإنشاء البطاقات مجمعة حسب الفئات مع الحفاظ على الترتيب المطلوب
  */
 function renderCards() {
-    const groupedWords = groupByCategory(vocabulary);
-    cardsContainer.innerHTML = ''; 
-
-    // ترتيب الفئات بنفس تسلسل الجداول المرفقة (من module 1 إلى module 3) لضمان دقة التنظيم
-    const categoryOrder = [
-        "Module 1 - Noms masculins", "Module 1 - Noms féminins", "Module 1 - Verbes", "Module 1 - Adj. & Expressions",
-        "Module Mes vêtements - Noms masculins", "Module Mes vêtements - Noms féminins", "Module Mes vêtements - Les vêtements", "Module Mes vêtements - Des accessoires", "Module Mes vêtements - Verbes", "Module Mes vêtements - Adj. & Expressions",
-        "Module 2 - Noms masculins", "Module 2 - Noms féminins", "Module 2 - Les parties de la maison", "Module 2 - Verbes", "Module 2 - Adj. & Expressions",
-        "Module 3 - Noms masculins", "Module 3 - Noms féminins", "Module 3 - Verbes", "Module 3 - Adj. & Expressions"
-    ]; 
-    
-    // التأكد من أننا نعالج الفئات الموجودة فقط وبالترتيب المحدد
-    const categoriesToRender = categoryOrder.filter(cat => groupedWords[cat]);
-    
-    categoriesToRender.forEach(category => {
-        const words = groupedWords[category];
-
-        // 1. إنشاء عنوان الفئة
-        const title = document.createElement('h2');
-        title.classList.add('category-title');
-        
-        // تقسيم العنوان ليظهر بشكل أجمل (مثلاً: "Module 3" و "Noms masculins")
-        const parts = category.split(' - ');
-        const mainTitle = parts[0];
-        const subTitle = parts.length > 1 ? parts.slice(1).join(' - ') : '';
-        
-        title.innerHTML = `${mainTitle} <span>(${subTitle})</span>`;
-        cardsContainer.appendChild(title);
-
-        // 2. إنشاء حاوية مجموعة البطاقات (Grid)
-        const groupContainer = document.createElement('div');
-        groupContainer.classList.add('category-group');
-        
-        // 3. إنشاء البطاقات وإضافتها للمجموعة
-        words.forEach(item => {
-            const card = createCard(item);
-            groupContainer.appendChild(card);
-        });
-        
-        // 4. إضافة المجموعة إلى الحاوية الرئيسية
-        cardsContainer.appendChild(groupContainer);
-    });
-}
-
-// تشغيل دالة إنشاء البطاقات عند تحميل الصفحة
-window.onload = renderCards;
+    const groupedWords
