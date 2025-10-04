@@ -1,7 +1,7 @@
 /* تنسيقات عامة وتحديد الخط */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f7f6; /* لون خلفية فاتح */
+    background-color: #f0f4f7; /* لون خلفية فاتح ومريح */
     margin: 0;
     padding: 0;
     direction: rtl; /* دعم اللغة العربية */
@@ -10,102 +10,127 @@ body {
 
 /* تنسيق رأس الصفحة (Header) */
 .main-header {
-    background-color: #2e86c1; /* لون أزرق جديد جذاب */
+    background-color: #007bff; /* أزرق ناصع وجذاب */
     color: white;
     padding: 25px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .main-header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     letter-spacing: 1px;
-    color: #ffd700; /* لون ذهبي لاسم الموقع */
+    color: #ffc107; /* لون أصفر ذهبي لاسم الموقع */
 }
 
 .main-header p {
-    margin: 5px 0 0;
-    font-size: 1rem;
+    margin: 8px 0 0;
+    font-size: 1.1rem;
     font-weight: 300;
 }
 
-/* تنسيق حاوية البطاقات (Grid Layout) */
+/* تنسيق حاوية البطاقات (يستخدم Flex لتضمين العناوين كعناصر متدفقة) */
 .cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    display: flex; 
+    flex-direction: column;
     padding: 40px;
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
+    gap: 20px; 
+}
+
+/* حاوية فرعية للبطاقات لتطبيق Grid داخل كل مجموعة */
+.category-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px; /* مسافة بعد نهاية كل مجموعة */
+}
+
+/* تنسيق عنوان الفئة (العناوين الفاصلة للجداول) */
+.category-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #34495e; /* لون غامق للعناوين */
+    padding: 15px 0;
+    margin-bottom: 10px;
+    border-bottom: 4px solid #007bff; /* خط فاصل بلون العنوان الرئيسي */
+    width: 100%; 
+    text-align: right;
+}
+.category-title span {
+    font-size: 1.2rem;
+    color: #dc3545;
+    margin-right: 15px;
 }
 
 /* تنسيق البطاقة الواحدة */
 .word-card {
     background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     padding: 30px;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
-    min-height: 160px;
+    min-height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* تأثير التفاعل عند مرور مؤشر الفأرة أو النقر */
+/* تأثير التفاعل */
 .word-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
 }
 
 /* تنسيق الكلمة الفرنسية */
 .french-word {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: #c0392b; /* لون أحمر غامق للفرنسية */
-    margin-bottom: 8px;
+    color: #dc3545; /* أحمر حيوي للفرنسية */
+    margin-bottom: 10px;
     text-align: left;
+    line-height: 1.2;
 }
 
 /* تنسيق الترجمة العربية */
 .arabic-translation {
-    font-size: 1.15rem;
-    color: #34495e;
+    font-size: 1.25rem;
+    color: #343a40;
     margin-bottom: 20px;
 }
 
 /* تنسيق أيقونة النطق */
 .pronounce-icon {
-    font-size: 2rem;
-    color: #27ae60; /* لون أخضر للنطق */
+    font-size: 2.2rem;
+    color: #28a745; /* أخضر للنطق */
     text-align: left;
     transition: color 0.3s;
 }
 
 /* ************************************** */
-/* تنسيقات إضافية لحالة "جاري النطق"    */
+/* تنسيقات حالة "جاري النطق"            */
 /* ************************************** */
 .word-card.speaking {
-    border: 4px solid #27ae60;
-    background-color: #ecf0f1; 
-}
-.word-card.speaking .pronounce-icon {
-    color: #c0392b; /* تغيير لون الأيقونة أثناء النطق */
+    border: 5px solid #28a745;
+    background-color: #e2f0e9; 
 }
 
 /* ************************************** */
 /* تنسيقات الهواتف (Media Query)        */
 /* ************************************** */
 @media (max-width: 768px) {
-    .main-header h1 {
-        font-size: 2.2rem;
-    }
     .cards-container {
-        grid-template-columns: 1fr; 
         padding: 20px;
+    }
+    .category-group {
+        grid-template-columns: 1fr; 
         gap: 20px;
+    }
+    .category-title {
+        font-size: 1.8rem;
     }
     .french-word {
         font-size: 1.6rem;
