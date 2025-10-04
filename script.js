@@ -1,161 +1,182 @@
-// 1. تعريف مصفوفة الكلمات (تم تحديثها بالكلمات من صورك المرفقة)
+// ملف JavaScript: script.js
 const vocabulary = [
-    // أسماء مذكرة (Noms masculins) - Module 2: Chez moi
-    { french: "un immeuble", arabic: "عمارة", category: "أسماء مذكرة" },
-    { french: "un appartement", arabic: "شقة", category: "أسماء مذكرة" },
-    { french: "un étage", arabic: "طابق", category: "أسماء مذكرة" },
-    { french: "un meuble", arabic: "أثاث", category: "أسماء مذكرة" },
-    { french: "un balcon", arabic: "بلكونة (شرفة)", category: "أسماء مذكرة" },
-    { french: "un espace", arabic: "مساحة", category: "أسماء مذكرة" },
-    { french: "un piano", arabic: "بيانو (آلة موسيقية)", category: "أسماء مذكرة" },
-    { french: "un objet", arabic: "شيء", category: "أسماء مذكرة" },
-    { french: "les escaliers", arabic: "سلالم", category: "أسماء مذكرة" },
-    { french: "un poster", arabic: "بوستر (ملصق)", category: "أسماء مذكرة" },
-    { french: "un placard", arabic: "دولاب", category: "أسماء مذكرة" },
-    { french: "un ordinateur", arabic: "كمبيوتر", category: "أسماء مذكرة" },
-    { french: "un voisin", arabic: "جار", category: "أسماء مذكرة" },
-    { french: "un repas", arabic: "وجبة", category: "أسماء مذكرة" },
-    { french: "le week-end", arabic: "عطلة نهاية الأسبوع", category: "أسماء مذكرة" },
-    { french: "un tableau", arabic: "لوحة", category: "أسماء مذكرة" },
-    { french: "un bureau", arabic: "مكتب", category: "أسماء مذكرة" },
-    { french: "un parc", arabic: "منتزه عام", category: "أسماء مذكرة" },
+    // ===============================================================
+    // Module 1: مفردات المدرسة والرياضة والأساسيات
+    // ===============================================================
+    // Noms masculins (Module 1)
+    { french: "un collège mixte", arabic: "مدرسة مشتركة", category: "Module 1 - Noms masculins" },
+    { french: "un directeur", arabic: "مدير", category: "Module 1 - Noms masculins" },
+    { french: "un objet", arabic: "شيء", category: "Module 1 - Noms masculins" },
+    { french: "un plan", arabic: "شكل تخطيطي", category: "Module 1 - Noms masculins" },
+    { french: "un sac", arabic: "حقيبة", category: "Module 1 - Noms masculins" },
+    { french: "un restaurant self", arabic: "مطعم خدمة ذاتية", category: "Module 1 - Noms masculins" },
+    { french: "un terrain de sport", arabic: "صالة ألعاب رياضية", category: "Module 1 - Noms masculins" },
+    { french: "un sport", arabic: "رياضة", category: "Module 1 - Noms masculins" },
+    { french: "un ballon", arabic: "كرة كبيرة", category: "Module 1 - Noms masculins" },
+    { french: "un maillot", arabic: "زي رياضي (تي شيرت)", category: "Module 1 - Noms masculins" },
+    { french: "un drapeau", arabic: "علم", category: "Module 1 - Noms masculins" },
+    { french: "un adolescent (un ado)", arabic: "مراهق", category: "Module 1 - Noms masculins" },
+    { french: "un jeune", arabic: "شاب", category: "Module 1 - Noms masculins" },
+    { french: "un chanteur", arabic: "مطرب / مغني", category: "Module 1 - Noms masculins" },
+    { french: "un mélange", arabic: "خليط", category: "Module 1 - Noms masculins" },
+    { french: "le théâtre", arabic: "المسرح", category: "Module 1 - Noms masculins" },
+    { french: "le cinéma", arabic: "السينما", category: "Module 1 - Noms masculins" },
+    { french: "le poisson", arabic: "السمك", category: "Module 1 - Noms masculins" },
+    { french: "un short", arabic: "شورت", category: "Module 1 - Noms masculins" },
+    { french: "des goûts", arabic: "ميول", category: "Module 1 - Noms masculins" },
+    { french: "des jeux vidéo", arabic: "ألعاب فيديو", category: "Module 1 - Noms masculins" },
+    { french: "l'arbre généalogique", arabic: "شجرة العائلة", category: "Module 1 - Noms masculins" },
+    { french: "un membre", arabic: "عضو - فرد", category: "Module 1 - Noms masculins" },
+    { french: "un homme", arabic: "رجل", category: "Module 1 - Noms masculins" },
+    { french: "un étudiant", arabic: "طالب جامعي", category: "Module 1 - Noms masculins" },
+    { french: "un joueur", arabic: "لاعب", category: "Module 1 - Noms masculins" },
+    { french: "le visage", arabic: "الوجه", category: "Module 1 - Noms masculins" },
+    { french: "les yeux", arabic: "العينين", category: "Module 1 - Noms masculins" },
+    { french: "les cheveux", arabic: "الشعر", category: "Module 1 - Noms masculins" },
 
-    // أسماء مؤنثة (Noms féminins)
-    { french: "une maison", arabic: "منزل", category: "أسماء مؤنثة" },
-    { french: "une pièce", arabic: "حجرة", category: "أسماء مؤنثة" },
-    { french: "une porte", arabic: "باب", category: "أسماء مؤنثة" },
-    { french: "une fenêtre", arabic: "شباك", category: "أسماء مؤنثة" },
-    { french: "une décoration", arabic: "ديكور", category: "أسماء مؤنثة" },
-    { french: "une voisine", arabic: "جارة", category: "أسماء مؤنثة" },
-    { french: "une terrasse", arabic: "تراس / بلكونة كبيرة", category: "أسماء مؤنثة" },
-    { french: "une chaise-longue", arabic: "كرسي طويل للاسترخاء", category: "أسماء مؤنثة" },
-    { french: "une ville", arabic: "مدينة", category: "أسماء مؤنثة" },
-    { french: "une bibliothèque", arabic: "مكتبة", category: "أسماء مؤنثة" },
+    // Noms féminins (Module 1)
+    { french: "une école", arabic: "مدرسة", category: "Module 1 - Noms féminins" },
+    { french: "une classe", arabic: "فصل", category: "Module 1 - Noms féminins" },
+    { french: "une bibliothèque", arabic: "مكتبة", category: "Module 1 - Noms féminins" },
+    { french: "une directrice", arabic: "مديرة", category: "Module 1 - Noms féminins" },
+    { french: "une préférence", arabic: "تفضيل", category: "Module 1 - Noms féminins" },
+    { french: "une tenue de sport", arabic: "زي رياضي", category: "Module 1 - Noms féminins" },
+    { french: "une chanteuse", arabic: "مطربة / مغنية", category: "Module 1 - Noms féminins" },
+    { french: "la danse", arabic: "الرقص", category: "Module 1 - Noms féminins" },
+    { french: "la télévision", arabic: "التلفزيون", category: "Module 1 - Noms féminins" },
+    { french: "la musique", arabic: "الموسيقى", category: "Module 1 - Noms féminins" },
+    { french: "la gymnastique", arabic: "التربية البدنية", category: "Module 1 - Noms féminins" },
+    { french: "une chanson", arabic: "أغنية", category: "Module 1 - Noms féminins" },
+    { french: "la viande", arabic: "اللحمة", category: "Module 1 - Noms féminins" },
+    { french: "des frites", arabic: "بطاطس محمرة", category: "Module 1 - Noms féminins" },
+    { french: "des chaussures", arabic: "حذاء", category: "Module 1 - Noms féminins" },
+    { french: "une famille", arabic: "عائلة / أسرة", category: "Module 1 - Noms féminins" },
+    { french: "une femme", arabic: "امرأة / سيدة", category: "Module 1 - Noms féminins" },
+    { french: "une photo", arabic: "صورة", category: "Module 1 - Noms féminins" },
+    { french: "une photographie", arabic: "صورة", category: "Module 1 - Noms féminins" },
+    { french: "une taille", arabic: "طول القامة", category: "Module 1 - Noms féminins" },
+    { french: "une description physique", arabic: "وصف جسماني", category: "Module 1 - Noms féminins" },
 
-    // أجزاء المنزل (Les parties de la maison)
-    { french: "un salon", arabic: "صالون", category: "أجزاء المنزل" },
-    { french: "un couloir", arabic: "ممر", category: "أجزاء المنزل" },
-    { french: "une chambre", arabic: "غرفة نوم", category: "أجزاء المنزل" },
-    { french: "une cuisine", arabic: "مطبخ", category: "أجزاء المنزل" },
-    { french: "un jardin", arabic: "حديقة", category: "أجزاء المنزل" },
-    { french: "une salle à manger", arabic: "غرفة طعام", category: "أجزاء المنزل" },
-    { french: "une entrée", arabic: "مدخل", category: "أجزاء المنزل" },
-    { french: "une salle de bains", arabic: "حمام", category: "أجزاء المنزل" },
-    { french: "les toilettes", arabic: "الحمام (دورات المياه)", category: "أجزاء المنزل" },
-    { french: "un garage", arabic: "جراج", category: "أجزاء المنزل" },
+    // Verbes (Module 1)
+    { french: "manger", arabic: "يأكل", category: "Module 1 - Verbes" },
+    { french: "identifier", arabic: "يحدد هوية", category: "Module 1 - Verbes" },
+    { french: "préparer", arabic: "يعد / يجهز", category: "Module 1 - Verbes" },
+    { french: "mettre", arabic: "يضع / يرتدي", category: "Module 1 - Verbes" },
+    { french: "décrire", arabic: "يصف", category: "Module 1 - Verbes" },
+    { french: "lire", arabic: "يقرأ", category: "Module 1 - Verbes" },
+    { french: "aimer", arabic: "يحب", category: "Module 1 - Verbes" },
+    { french: "jouer", arabic: "يلعب", category: "Module 1 - Verbes" },
+    { french: "se passer", arabic: "يحدث", category: "Module 1 - Verbes" },
+    { french: "exprimer", arabic: "يعبر عن", category: "Module 1 - Verbes" },
+    { french: "mélanger", arabic: "يخلط", category: "Module 1 - Verbes" },
+    { french: "colorier", arabic: "يلوّن", category: "Module 1 - Verbes" },
+    { french: "marcher", arabic: "يمشي", category: "Module 1 - Verbes" },
+    { french: "danser", arabic: "يرقص", category: "Module 1 - Verbes" },
+    { french: "parler", arabic: "يتكلم", category: "Module 1 - Verbes" },
+    { french: "étudier", arabic: "يدرس", category: "Module 1 - Verbes" },
+    { french: "regarder", arabic: "يشاهد", category: "Module 1 - Verbes" },
+    { french: "donner", arabic: "يعطي", category: "Module 1 - Verbes" },
 
-    // أفعال (Verbes)
-    { french: "prendre", arabic: "يتناول", category: "أفعال" },
-    { french: "préparer", arabic: "يعد / يجهز", category: "أفعال" },
-    { french: "dormir", arabic: "ينام", category: "أفعال" },
-    { french: "voir", arabic: "يرى", category: "أفعال" },
-    { french: "travailler", arabic: "يعمل", category: "أفعال" },
-    { french: "savoir", arabic: "يعرف", category: "أفعال" },
-    { french: "passer", arabic: "يقضي", category: "أفعال" },
-    { french: "inviter", arabic: "يدعو", category: "أفعال" },
-    { french: "situer", arabic: "يحدد موقع", category: "أفعال" },
-    { french: "arriver", arabic: "يصل", category: "أفعال" },
-    { french: "téléphoner", arabic: "يتصل تلفونياً", category: "أفعال" },
-    { french: "regarder", arabic: "يشاهد", category: "أفعال" },
-    { french: "étudier", arabic: "يدرس", category: "أفعال" },
-    { french: "jouer", arabic: "يلعب", category: "أفعال" },
-    { french: "décorer", arabic: "يزين", category: "أفعال" },
-    { french: "se doucher", arabic: "يأخذ دش", category: "أفعال" },
-    { french: "se coucher", arabic: "يرقد", category: "أفعال" },
-    { french: "se déplacer", arabic: "يتنقل", category: "أفعال" },
-    { french: "partager", arabic: "يتقاسم", category: "أفعال" },
-
-    // صفات وظروف وتعبيرات (Adjectives, Adverbs, Expressions)
-    { french: "petit", arabic: "صغير", category: "صفات / تعبيرات" },
-    { french: "grand", arabic: "كبير", category: "صفات / تعبيرات" },
-    { french: "seul", arabic: "بمفرده", category: "صفات / تعبيرات" },
-    { french: "nouveau / nouvel", arabic: "جديد", category: "صفات / تعبيرات" },
-    { french: "nouvelle", arabic: "جديدة", category: "صفات / تعبيرات" },
-    { french: "propre", arabic: "نظيف", category: "صفات / تعبيرات" },
-    { french: "confortable", arabic: "مريح", category: "صفات / تعبيرات" },
-    { french: "idéal", arabic: "مثالي / نموذجي", category: "صفات / تعبيرات" },
-    { french: "aussi", arabic: "أيضاً", category: "صفات / تعبيرات" },
-    { french: "voici", arabic: "ها هو / ها هي", category: "صفات / تعبيرات" },
-    { french: "dehors", arabic: "بالخارج", category: "صفات / تعبيرات" },
-    { french: "désolé", arabic: "آسف", category: "صفات / تعبيرات" },
-    { french: "super", arabic: "رائع", category: "صفات / تعبيرات" },
-    { french: "chez moi", arabic: "عندي (في منزلي)", category: "صفات / تعبيرات" },
-    { french: "chez lui", arabic: "عنده (في منزله)", category: "صفات / تعبيرات" },
-    { french: "autre", arabic: "آخر", category: "صفات / تعبيرات" },
-    { french: "même", arabic: "حتى / نفس", category: "صفات / تعبيرات" },
-    { french: "être assis", arabic: "جالس", category: "صفات / تعبيرات" },
-    { french: "être composé de", arabic: "مكون من", category: "صفات / تعبيرات" },
-    { french: "c'est l'heure", arabic: "حان الوقت", category: "صفات / تعبيرات" },
-    { french: "au nord de", arabic: "في شمال", category: "صفات / تعبيرات" },
-    { french: "poser une question", arabic: "يوجه سؤال", category: "صفات / تعبيرات" },
-    { french: "on regarde la TV", arabic: "نشاهد التلفزيون", category: "صفات / تعبيرات" },
-    { french: "on dort", arabic: "ننام", category: "صفات / تعبيرات" },
-    { french: "on prépare les repas", arabic: "نعد الوجبات", category: "صفات / تعبيرات" },
-    { french: "on prend les repas", arabic: "نتناول الوجبات", category: "صفات / تعبيرات" },
-    { french: "on se déplace d'une pièce à une autre", arabic: "نتنقل من غرفة إلى أخرى", category: "صفات / تعبيرات" },
-    { french: "faire sa toilette", arabic: "الاعتناء بالنظافة الشخصية", category: "صفات / تعبيرات" },
-    { french: "aller aux toilettes", arabic: "الذهاب إلى الحمام", category: "صفات / تعبيرات" },
-];
-
-const cardsContainer = document.getElementById('cards-container');
-const utterance = new SpeechSynthesisUtterance();
-
-/**
- * دالة لتشغيل النطق الصوتي للكلمة الفرنسية
- * @param {string} textToSpeak - الكلمة الفرنسية المراد نطقها
- * @param {HTMLElement} cardElement - عنصر البطاقة لتطبيق تنسيق "جاري النطق"
- */
-function speakFrenchWord(textToSpeak, cardElement) {
-    if (!('speechSynthesis' in window)) {
-        alert("عذراً، متصفحك لا يدعم ميزة النطق الصوتي (Speech Synthesis).");
-        return;
-    }
-
-    // إيقاف أي نطق سابق
-    window.speechSynthesis.cancel();
+    // Adj., adv., prép. et expressions (Module 1)
+    { french: "maintenant", arabic: "الآن", category: "Module 1 - Adj. & Expressions" },
+    { french: "super", arabic: "رائع", category: "Module 1 - Adj. & Expressions" },
+    { french: "idéal (e)", arabic: "مثالي", category: "Module 1 - Adj. & Expressions" },
+    { french: "bienvenue", arabic: "مرحباً", category: "Module 1 - Adj. & Expressions" },
+    { french: "très", arabic: "جداً", category: "Module 1 - Adj. & Expressions" },
+    { french: "il y a", arabic: "يوجد", category: "Module 1 - Adj. & Expressions" },
+    { french: "préféré (e)", arabic: "مفضل", category: "Module 1 - Adj. & Expressions" },
+    { french: "mais", arabic: "لكن", category: "Module 1 - Adj. & Expressions" },
+    { french: "châtain", arabic: "كستنائي اللون", category: "Module 1 - Adj. & Expressions" },
+    { french: "sympa", arabic: "لطيف / رفيق", category: "Module 1 - Adj. & Expressions" },
+    { french: "beau / laid", arabic: "جميل / قبيح", category: "Module 1 - Adj. & Expressions" },
+    { french: "belle", arabic: "جميلة", category: "Module 1 - Adj. & Expressions" },
+    { french: "riche / pauvre", arabic: "غني / فقير", category: "Module 1 - Adj. & Expressions" },
     
-    // إعداد النطق
-    utterance.text = textToSpeak;
-    utterance.lang = 'fr-FR'; // تحديد اللغة الفرنسية
-    utterance.rate = 1; 
+    // ===============================================================
+    // Module Mes vêtements: الملابس والإكسسوارات
+    // ===============================================================
+    // Noms masculins (Mes vêtements)
+    { french: "un vêtement", arabic: "ملبس", category: "Module Mes vêtements - Noms masculins" },
+    { french: "un look", arabic: "مظهر - هيئة", category: "Module Mes vêtements - Noms masculins" },
+    { french: "un uniforme", arabic: "زي موحد", category: "Module Mes vêtements - Noms masculins" },
+    { french: "un accessoire", arabic: "إكسسوار", category: "Module Mes vêtements - Noms masculins" },
+    { french: "un modèle", arabic: "نموذج / موديل", category: "Module Mes vêtements - Noms masculins" },
+    { french: "un magasin", arabic: "محل", category: "Module Mes vêtements - Noms masculins" },
+    { french: "un vendeur", arabic: "بائع", category: "Module Mes vêtements - Noms masculins" },
+    { french: "un animal", arabic: "حيوان", category: "Module Mes vêtements - Noms masculins" },
+    { french: "un homme", arabic: "رجل", category: "Module Mes vêtements - Noms masculins" },
+    { french: "un ado", arabic: "مراهق", category: "Module Mes vêtements - Noms masculins" },
+    { french: "un jeune", arabic: "شاب", category: "Module Mes vêtements - Noms masculins" },
+    { french: "un travail", arabic: "عمل", category: "Module Mes vêtements - Noms masculins" },
+    { french: "un site", arabic: "موقع", category: "Module Mes vêtements - Noms masculins" },
+    { french: "un client", arabic: "زبون", category: "Module Mes vêtements - Noms masculins" },
+    { french: "un enfant", arabic: "طفل", category: "Module Mes vêtements - Noms masculins" },
+    { french: "un club", arabic: "نادي", category: "Module Mes vêtements - Noms masculins" },
+    { french: "des motifs (vêtements)", arabic: "زخارف (رسوم على الملابس)", category: "Module Mes vêtements - Noms masculins" },
+    { french: "le prix", arabic: "السعر", category: "Module Mes vêtements - Noms masculins" },
+
+    // Noms féminins (Mes vêtements)
+    { french: "une tenue", arabic: "زي - ملبس", category: "Module Mes vêtements - Noms féminins" },
+    { french: "une taille", arabic: "مقاس الملابس", category: "Module Mes vêtements - Noms féminins" },
+    { french: "une valise", arabic: "حقيبة سفر", category: "Module Mes vêtements - Noms féminins" },
+    { french: "la pointure", arabic: "مقاس الحذاء", category: "Module Mes vêtements - Noms féminins" },
+    { french: "une femme", arabic: "إمرأة", category: "Module Mes vêtements - Noms féminins" },
+    { french: "une fête", arabic: "حفلة", category: "Module Mes vêtements - Noms féminins" },
+    { french: "une occasion", arabic: "مناسبة", category: "Module Mes vêtements - Noms féminins" },
+    { french: "une chambre", arabic: "غرفة", category: "Module Mes vêtements - Noms féminins" },
+    { french: "une différence", arabic: "إختلاف", category: "Module Mes vêtements - Noms féminins" },
+    { french: "une chanson", arabic: "أغنية", category: "Module Mes vêtements - Noms féminins" },
+    { french: "une enfant", arabic: "طفلة", category: "Module Mes vêtements - Noms féminins" },
+    { french: "des chaussures", arabic: "حذاء", category: "Module Mes vêtements - Noms féminins" },
+    { french: "des baskets", arabic: "حذاء رياضي", category: "Module Mes vêtements - Noms féminins" },
+    { french: "des vacances", arabic: "إجازة", category: "Module Mes vêtements - Noms féminins" },
     
-    // إضافة تنسيق "جاري النطق" عند البدء
-    cardElement.classList.add('speaking');
+    // Les vêtements (الملابس)
+    { french: "un pantalon", arabic: "بنطلون", category: "Module Mes vêtements - Les vêtements" },
+    { french: "un pull", arabic: "بلوفر", category: "Module Mes vêtements - Les vêtements" },
+    { french: "un short", arabic: "شورت", category: "Module Mes vêtements - Les vêtements" },
+    { french: "un anorak", arabic: "سترة بمظلة بغطاء للرأس", category: "Module Mes vêtements - Les vêtements" },
+    { french: "un tee-shirt", arabic: "تي شيرت", category: "Module Mes vêtements - Les vêtements" },
+    { french: "un jean", arabic: "بنطلون جينز", category: "Module Mes vêtements - Les vêtements" },
+    { french: "un costume", arabic: "بذلة", category: "Module Mes vêtements - Les vêtements" },
+    { french: "un survêtement", arabic: "بدلة رياضية (تريكو)", category: "Module Mes vêtements - Les vêtements" },
+    { french: "un manteau", arabic: "معطف / بلطو", category: "Module Mes vêtements - Les vêtements" },
+    { french: "un blouson", arabic: "جاكيت قصير", category: "Module Mes vêtements - Les vêtements" },
+    { french: "un chemisier", arabic: "بلوزة (قميص للسيدات)", category: "Module Mes vêtements - Les vêtements" },
+    { french: "un caleçon", arabic: "سروال داخلي / كلسون", category: "Module Mes vêtements - Les vêtements" },
+    { french: "une robe", arabic: "فستان", category: "Module Mes vêtements - Les vêtements" },
+    { french: "une jupe", arabic: "جيبة", category: "Module Mes vêtements - Les vêtements" },
+    { french: "une chemise", arabic: "قميص", category: "Module Mes vêtements - Les vêtements" },
+    { french: "une veste", arabic: "جاكيت", category: "Module Mes vêtements - Les vêtements" },
+    { french: "des chaussettes (f)", arabic: "جورب", category: "Module Mes vêtements - Les vêtements" },
 
-    // إزالة تنسيق "جاري النطق" عند الانتهاء
-    utterance.onend = () => {
-        cardElement.classList.remove('speaking');
-    };
-    
-    // تشغيل النطق
-    window.speechSynthesis.speak(utterance);
-}
+    // Des accessoires (إكسسوارات)
+    { french: "un chapeau", arabic: "قبعة", category: "Module Mes vêtements - Des accessoires" },
+    { french: "un bonnet", arabic: "طاقية", category: "Module Mes vêtements - Des accessories" },
+    { french: "un sac", arabic: "حقيبة", category: "Module Mes vêtements - Des accessories" },
+    { french: "un collier", arabic: "عقد", category: "Module Mes vêtements - Des accessories" },
+    { french: "une casquette", arabic: "كاسكيت", category: "Module Mes vêtements - Des accessories" },
+    { french: "une cravate", arabic: "كرافتة / رباط عنق", category: "Module Mes vêtements - Des accessories" },
+    { french: "une écharpe", arabic: "إيشارب (لفاف عنق)", category: "Module Mes vêtements - Des accessories" },
+    { french: "des lunettes de soleil", arabic: "نظارة شمس", category: "Module Mes vêtements - Des accessories" },
 
-/**
- * دالة لإنشاء بطاقة الكلمة وإضافتها إلى الصفحة
- */
-function renderCards() {
-    vocabulary.forEach(item => {
-        // إنشاء عنصر البطاقة
-        const card = document.createElement('div');
-        card.classList.add('word-card');
-        
-        // بناء المحتوى الداخلي للبطاقة
-        card.innerHTML = `
-            <div class="french-word">${item.french}</div>
-            <div class="arabic-translation"> (${item.category}) ${item.arabic}</div>
-            <div class="pronounce-icon">🔊</div>
-        `;
-        
-        // إضافة حدث النقر لتشغيل النطق
-        card.addEventListener('click', () => {
-            speakFrenchWord(item.french, card);
-        });
+    // Verbes (Mes vêtements)
+    { french: "mettre", arabic: "يرتدي", category: "Module Mes vêtements - Verbes" },
+    { french: "porter", arabic: "يرتدي", category: "Module Mes vêtements - Verbes" },
+    { french: "s'habiller", arabic: "يرتدي", category: "Module Mes vêtements - Verbes" },
+    { french: "acheter", arabic: "يشتري", category: "Module Mes vêtements - Verbes" },
+    { french: "montrer", arabic: "يشير إلى", category: "Module Mes vêtements - Verbes" },
+    { french: "connaître", arabic: "يعرف", category: "Module Mes vêtements - Verbes" },
+    { french: "coûter", arabic: "يكلف", category: "Module Mes vêtements - Verbes" },
+    { french: "lire", arabic: "يقرأ", category: "Module Mes vêtements - Verbes" },
+    { french: "prendre", arabic: "يأخذ", category: "Module Mes vêtements - Verbes" },
+    { french: "faire", arabic: "يفعل / يمارس", category: "Module Mes vêtements - Verbes" },
+    { french: "aller", arabic: "يذهب", category: "Module Mes vêtements - Verbes" },
+    { french: "sortir", arabic: "يخرج", category: "Module Mes vêtements - Verbes" },
+    { french: "vendre", arabic: "يبيع", category: "Module Mes vêtements - Verbes" },
+    { french: "vouloir", arabic: "يريد", category: "Module Mes vêtements - Verbes" },
+    { french: "pouvoir", arabic: "يستطيع", category: "Module Mes vêtements - Verbes" },
+    { french: "s'informer sur", arabic: "يستعلم عن", category: "Module Mes vêtements - Verbes" },
 
-        // إضافة البطاقة إلى الحاوية
-        cardsContainer.appendChild(card);
-    });
-}
-
-// تشغيل دالة إنشاء البطاقات عند تحميل الصفحة
-window.onload = renderCards;
+    // Adj., adv., prép. et expressions (Mes vêtements)
+    { french: "nouveau /
